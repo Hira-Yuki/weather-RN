@@ -54,6 +54,12 @@ export const createStyles = theme =>
       color: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
       fontWeight: '500',
     },
+    dateContainer: {
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignContent: 'center',
+    },
     date: {
       color: theme ? COLOR_SET.light.dateColor : COLOR_SET.dark.dateColor,
       fontWeight: '700',
@@ -61,6 +67,12 @@ export const createStyles = theme =>
       justifyContent: 'center',
       alignItems: 'center',
       alignContent: 'center',
+    },
+    weatherContainer: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      width: '100%',
+      justifyContent: 'space-between',
     },
     nonTodayDate: {
       color: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
@@ -96,5 +108,3 @@ export const noPermissionStyles = StyleSheet.create({
     marginTop: 5,
   },
 });
-
-// export const iconsColor = theme ? COLOR_SET.light.color : COLOR_SET.dark.color;

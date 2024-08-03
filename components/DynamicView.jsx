@@ -2,10 +2,10 @@ import DailyWeather from './DailyWeather';
 import LoadingIndicator from './LoadingIndicator';
 
 export default function DynamicView({ days }) {
-  if (days.length === 0) {
-    return <LoadingIndicator />;
-  } else {
-    return days.map((day, index) => (
+  return days.length === 0 ? (
+    <LoadingIndicator />
+  ) : (
+    days.map((day, index) => (
       <DailyWeather
         key={index}
         index={index}
@@ -13,6 +13,6 @@ export default function DynamicView({ days }) {
         main={day.weather[0].main}
         description={day.weather[0].description}
       />
-    ));
-  }
+    ))
+  );
 }

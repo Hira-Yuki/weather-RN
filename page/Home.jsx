@@ -18,7 +18,6 @@ export default function Home() {
         <ScrollableView>
           <DynamicView days={days} />
         </ScrollableView>
-
         <StatusBar style={styles.statusbar} />
       </View>
     );

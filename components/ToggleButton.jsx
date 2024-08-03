@@ -2,11 +2,11 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { useContext } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { ThemeContext } from '../contexts/ThemeContext';
-import { createStyles } from '../styles/styleSheet';
+import useStyles from '../hooks/useStyles';
 
 export default function ToggleButton() {
   const { isLightTheme, toggleTheme } = useContext(ThemeContext);
-  const styles = createStyles(isLightTheme);
+  const styles = useStyles();
 
   return (
     <TouchableOpacity onPress={toggleTheme}>

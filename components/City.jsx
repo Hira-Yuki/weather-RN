@@ -1,12 +1,9 @@
-import { useContext } from 'react';
 import { Text, View } from 'react-native';
-import { ThemeContext } from '../contexts/ThemeContext';
-import { createStyles } from '../styles/styleSheet';
+import useStyles from '../hooks/useStyles';
 import ToggleButton from './ToggleButton';
 
 export default function City({ city }) {
-  const { isLightTheme } = useContext(ThemeContext);
-  const styles = createStyles(isLightTheme);
+  const styles = useStyles();
 
   return (
     <View style={styles.city}>

@@ -1,11 +1,8 @@
-import { useContext } from 'react';
 import { ScrollView } from 'react-native';
-import { ThemeContext } from '../contexts/ThemeContext';
-import { createStyles } from '../styles/styleSheet';
+import useStyles from '../hooks/useStyles';
 
 export default function ScrollableView({ children }) {
-  const { isLightTheme } = useContext(ThemeContext);
-  const styles = createStyles(isLightTheme);
+  const styles = useStyles();
 
   return (
     <ScrollView

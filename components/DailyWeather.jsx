@@ -1,13 +1,10 @@
 import { Fontisto } from '@expo/vector-icons';
-import { useContext } from 'react';
 import { Text, View } from 'react-native';
 import { ICONS } from '../constants/icons';
-import { ThemeContext } from '../contexts/ThemeContext';
-import { createStyles } from '../styles/styleSheet';
+import useStyles from '../hooks/useStyles';
 
 export default function DailyWeather({ temp, main, description, index }) {
-  const { isLightTheme } = useContext(ThemeContext);
-  const styles = createStyles(isLightTheme);
+  const styles = useStyles();
 
   const getDate = index => {
     const today = new Date();
@@ -22,26 +19,12 @@ export default function DailyWeather({ temp, main, description, index }) {
 
   return (
     <View style={styles.day}>
-      <View
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'center',
-          alignItems: 'center',
-          alignContent: 'center',
-        }}
-      >
+      <View style={styles.dateContainer}>
         <Text style={[styles.date, index !== 0 && styles.nonTodayDate]}>
           {index === 0 ? 'TODAY' : getDate(index)}
         </Text>
       </View>
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
-          width: '100%',
-          justifyContent: 'space-between',
-        }}
-      >
+      <View style={styles.weatherContainer}>
         <Text style={styles.temp}>{parseFloat(temp).toFixed(1)}</Text>
         <Fontisto name={ICONS[main]} size={68} color={styles.iconsColor} />
       </View>
