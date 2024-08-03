@@ -1,20 +1,27 @@
+
 # 날씨 앱 (Weather App)
 
 이 프로젝트는 Expo와 React Native를 사용하여 개발된 간단한 날씨 앱입니다. 이 앱은 다양한 위치에 대한 현재 날씨 정보를 제공합니다. 날씨 API를 활용하여 실시간 데이터를 가져옵니다.
 
 ## 주요 기능
 
-- 특정 위치의 현재 날씨 상태를 확인할 수 있습니다.
-- 온도, 습도, 풍속, 날씨 상태를 표시합니다.
-- 사용하기 쉬운 인터페이스와 간편한 네비게이션 제공
-- 모바일 및 데스크톱에서 모두 사용 가능한 반응형 디자인
+- 현재 위치의 현재 날씨 상태를 확인할 수 있습니다.
+- 오늘 날짜로부터 5일간의 일기예보를 확인할 수 있습니다.
+- 다크모드 지원
+
+![화면 기록 2024-08-04 오전 2 00 00](https://github.com/user-attachments/assets/cf267edb-f639-4988-b18e-51fc549b62dc)
+
+![화면 기록 2024-08-04 오전 2 03 16](https://github.com/user-attachments/assets/17580b72-2230-4c12-997b-9fb4aa37ad38)
+
+![화면 기록 2024-08-04 오전 2 00 00](https://github.com/user-attachments/assets/3bb9e326-2570-4adb-b035-f676ae532b74)
+
 
 ## 사용 기술
 
 - Expo
 - React Native
 - JavaScript
-- 날씨 API (예: OpenWeatherMap)
+- 날씨 API (OpenWeatherMap)
 
 ## 설치 방법
 
