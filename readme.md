@@ -9,12 +9,11 @@
 - 오늘 날짜로부터 5일간의 일기예보를 확인할 수 있습니다.
 - 다크모드 지원
 
-![화면 기록 2024-08-04 오전 2 00 00](https://github.com/user-attachments/assets/cf267edb-f639-4988-b18e-51fc549b62dc)
+<img src='https://github.com/user-attachments/assets/cf267edb-f639-4988-b18e-51fc549b62dc' alt='기본 인터페이스' width="300"/>
 
-![화면 기록 2024-08-04 오전 2 03 16](https://github.com/user-attachments/assets/17580b72-2230-4c12-997b-9fb4aa37ad38)
+<img src='https://github.com/user-attachments/assets/17580b72-2230-4c12-997b-9fb4aa37ad38' alt='위치 권한 없을 시 화면' width="300"/>
 
-![화면 기록 2024-08-04 오전 2 00 00](https://github.com/user-attachments/assets/3bb9e326-2570-4adb-b035-f676ae532b74)
-
+<img src='https://github.com/user-attachments/assets/4daca73a-4e4a-4ff2-a68b-65a278f69c2c' alt='다크모드 전환' width="300"/>
 
 ## 사용 기술
 
