@@ -1,7 +1,12 @@
+import { useContext } from 'react';
 import { ActivityIndicator, View } from 'react-native';
-import { styles } from '../styles/styleSheet';
+import { ThemeContext } from '../contexts/ThemeContext';
+import { createStyles } from '../styles/styleSheet';
 
 export default function LoadingIndicator() {
+  const { isLightTheme } = useContext(ThemeContext);
+  const styles = createStyles(isLightTheme);
+
   return (
     <View style={{ ...styles.day, alignItems: 'center' }}>
       <ActivityIndicator

@@ -1,62 +1,79 @@
 import { Dimensions, StyleSheet } from 'react-native';
 import { COLOR_SET } from '../constants/colorSet';
+
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
-/**
- *  @Todo: 전역 상태로 관리
- */
-const lightThem = false;
+export const createStyles = theme =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: theme
+        ? COLOR_SET.light.backgroundColor
+        : COLOR_SET.dark.backgroundColor,
+    },
+    statusbar: theme
+      ? COLOR_SET.light.statusbarColor
+      : COLOR_SET.dark.statusbarColor,
 
-export const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: lightThem
-      ? COLOR_SET.light.backgroundColor
-      : COLOR_SET.dark.backgroundColor,
-  },
-  statusbar: lightThem
-    ? COLOR_SET.light.statusbarColor
-    : COLOR_SET.dark.statusbarColor,
-  city: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    color: lightThem ? COLOR_SET.light.color : COLOR_SET.dark.color,
-  },
-  cityName: {
-    fontSize: 68,
-    fontWeight: '500',
-    color: lightThem ? COLOR_SET.light.color : COLOR_SET.dark.color,
-  },
-  weather: {},
-  day: {
-    width: SCREEN_WIDTH,
-    alignItems: 'flex-start',
-    paddingHorizontal: 20,
-  },
-  temp: {
-    marginTop: 50,
-    fontSize: 100,
-    color: lightThem ? COLOR_SET.light.color : COLOR_SET.dark.color,
-  },
-  description: {
-    marginTop: -10,
-    fontSize: 30,
-    color: lightThem ? COLOR_SET.light.color : COLOR_SET.dark.color,
-    fontWeight: '500',
-  },
-  loadingIndicator: {
-    width: SCREEN_WIDTH,
-    alignItems: 'center',
-    paddingHorizontal: 20,
-  },
-  tinyText: {
-    marginTop: -5,
-    fontSize: 25,
-    color: lightThem ? COLOR_SET.light.color : COLOR_SET.dark.color,
-    fontWeight: '500',
-  },
-});
+    city: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      // color: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
+    },
+    cityName: {
+      fontSize: 68,
+      fontWeight: '500',
+      color: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
+    },
+    weather: {},
+    day: {
+      width: SCREEN_WIDTH,
+      alignItems: 'flex-start',
+      paddingHorizontal: 20,
+    },
+    temp: {
+      marginTop: 50,
+      fontSize: 100,
+      color: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
+    },
+    description: {
+      marginTop: -10,
+      fontSize: 30,
+      color: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
+      fontWeight: '500',
+    },
+    loadingIndicator: {
+      width: SCREEN_WIDTH,
+      alignItems: 'center',
+      paddingHorizontal: 20,
+    },
+    tinyText: {
+      marginTop: -5,
+      fontSize: 25,
+      color: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
+      fontWeight: '500',
+    },
+    date: {
+      color: theme ? COLOR_SET.light.dateColor : COLOR_SET.dark.dateColor,
+      fontWeight: '700',
+      fontSize: 30,
+      justifyContent: 'center',
+      alignItems: 'center',
+      alignContent: 'center',
+    },
+    nonTodayDate: {
+      color: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
+    },
+    buttonContainer: {
+      marginRight: 40,
+      flex: 0.3,
+      flexDirection: 'row',
+      justifyContent: 'flex-end',
+      width: SCREEN_WIDTH,
+    },
+    iconsColor: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
+  });
 
 export const noPermissionStyles = StyleSheet.create({
   container: {
@@ -80,6 +97,4 @@ export const noPermissionStyles = StyleSheet.create({
   },
 });
 
-export const iconsColor = lightThem
-  ? COLOR_SET.light.color
-  : COLOR_SET.dark.color;
+// export const iconsColor = theme ? COLOR_SET.light.color : COLOR_SET.dark.color;

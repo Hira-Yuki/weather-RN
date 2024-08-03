@@ -1,6 +1,6 @@
 import * as Location from 'expo-location';
 import { useEffect, useState } from 'react';
-import { API_KEY } from '../constants/apiKey';
+import { API_KEY, API_URL } from '../constants/api';
 
 export default function useWeather() {
   const [city, setCity] = useState('Loading...');
@@ -24,7 +24,7 @@ export default function useWeather() {
     setCity(location[0].city);
 
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&lang=kr&appid=${API_KEY}`,
+      `${API_URL}?lat=${latitude}&lon=${longitude}&units=metric&lang=kr&appid=${API_KEY}`,
     );
     const json = await response.json();
     setDays(json.list.filter(({ dt_txt }) => dt_txt.endsWith('3:00:00')));

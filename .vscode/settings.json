@@ -7,7 +7,7 @@
     "source.fixAll.eslint": "always",
     "source.organizeImports": "always"
   },
-  "cSpell.words": ["Fontisto", "Geocode"],
+  "cSpell.words": ["darkred", "Fontisto", "Geocode"],
   "javascript.updateImportsOnFileMove.enabled": "always",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "typescript.tsserver.log": "verbose",

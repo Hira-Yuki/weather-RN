@@ -1,7 +1,12 @@
+import { useContext } from 'react';
 import { ScrollView } from 'react-native';
-import { styles } from '../styles/styleSheet';
+import { ThemeContext } from '../contexts/ThemeContext';
+import { createStyles } from '../styles/styleSheet';
 
 export default function ScrollableView({ children }) {
+  const { isLightTheme } = useContext(ThemeContext);
+  const styles = createStyles(isLightTheme);
+
   return (
     <ScrollView
       pagingEnabled
