@@ -10,6 +10,8 @@ module.exports = {
     'plugin:react-native/all',
     'airbnb',
     'plugin:prettier/recommended', // Prettier 설정 추가
+    'prettier',
+    'prettier/react',
   ],
   parserOptions: {
     ecmaFeatures: {
