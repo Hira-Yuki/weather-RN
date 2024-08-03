@@ -1,7 +1,6 @@
 import * as Location from 'expo-location';
 import { useEffect, useState } from 'react';
-
-const API_KEY = '';
+import { API_KEY } from '../constants/apiKey';
 
 export default function useWeather() {
   const [city, setCity] = useState('Loading...');
