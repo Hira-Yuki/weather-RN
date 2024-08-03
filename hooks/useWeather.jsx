@@ -10,7 +10,10 @@ export default function useWeather() {
   const getWeather = async () => {
     const { granted } = await Location.requestForegroundPermissionsAsync();
 
-    if (!granted) setOk(false);
+    if (!granted) {
+      setOk(false);
+      return;
+    }
 
     const {
       coords: { latitude, longitude },
@@ -27,7 +30,11 @@ export default function useWeather() {
       `${API_URL}?lat=${latitude}&lon=${longitude}&units=metric&lang=kr&appid=${API_KEY}`,
     );
     const json = await response.json();
-    setDays(json.list.filter(({ dt_txt }) => dt_txt.endsWith('3:00:00')));
+
+    const filteredJson = json.list.filter(({ dt_txt }) =>
+      dt_txt.endsWith('3:00:00'),
+    );
+    setDays(filteredJson);
   };
 
   useEffect(() => {
