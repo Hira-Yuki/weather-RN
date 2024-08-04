@@ -19,7 +19,6 @@ export const createStyles = theme =>
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      // color: theme ? COLOR_SET.light.color : COLOR_SET.dark.color,
     },
     cityName: {
       fontSize: 68,
